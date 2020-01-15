@@ -12,7 +12,8 @@ const routes = Router();
 
 routes.get('/devs', DevController.index);
 routes.post('/devs', DevController.store);
+routes.put('/devs/:id', DevController.update);
 
-routes.search('search', SearchController.index);
+routes.get('/search', SearchController.index);
 
 module.exports = routes;

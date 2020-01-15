@@ -1,5 +1,6 @@
 const axios = require('axios');
 const Dev = require('../models/Dev');
+const parseStringAsArray = require('../utils/parseStringAsArray');
 
 module.exports = {
   async index(request, response) {
@@ -35,7 +36,7 @@ module.exports = {
        * espaços em branco serão retirados, após cada item da array formada for 
        * percorrida.
        */
-      const techsArray = techs.split(',').map( tech => tech.trim() );
+      const techsArray = parseStringAsArray(techs);
     
       // Está a longitude antes pois é desse modo que o MongoDB grava geolocalização.
       // const location = {
@@ -57,5 +58,33 @@ module.exports = {
     }
   
     return response.json(dev);
+  },
+
+  async update(request, response) {
+    const id = request.params;
+    const { bio, techs, avatar_url, name, latitude, longitude } = request.body;
+    const techsArray = parseStringAsArray(techs);
+    const location = {
+      type: 'Point',
+      coordinates: [longitude, latitude]
+    };
+
+    if (id) {
+      let dev = await Dev.findByIdAndUpdate(id, {
+        $set: {
+          bio, 
+          techs: techsArray,
+          avatar_url, 
+          name, 
+          location
+        }
+      });
+    }
+
+    return response.json({ dev });
+  },
+
+  async destroy(id) {
+    await Dev.findOneAndRemove(id);
   }
 };
