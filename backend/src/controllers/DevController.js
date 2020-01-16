@@ -58,33 +58,5 @@ module.exports = {
     }
   
     return response.json(dev);
-  },
-
-  async update(request, response) {
-    const id = request.params;
-    const { bio, techs, avatar_url, name, latitude, longitude } = request.body;
-    const techsArray = parseStringAsArray(techs);
-    const location = {
-      type: 'Point',
-      coordinates: [longitude, latitude]
-    };
-
-    if (id) {
-      let dev = await Dev.findByIdAndUpdate(id, {
-        $set: {
-          bio, 
-          techs: techsArray,
-          avatar_url, 
-          name, 
-          location
-        }
-      });
-    }
-
-    return response.json({ dev });
-  },
-
-  async destroy(id) {
-    await Dev.findOneAndRemove(id);
   }
 };

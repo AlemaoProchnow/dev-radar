@@ -1,5 +1,7 @@
 // Importando o express para uso.
 const express = require('express');
+// Importando o CORS
+const cors = require('cors');
 // Importando o Mongoose.
 const mongoose = require('mongoose');
 // Importando as rotas.
@@ -60,6 +62,10 @@ app.use(routes);
 //    */
 //   return response.json({ message: 'Hello, OmniStack!' });
 // });
+
+
+// CORS permite que o Node funcione com vários acessos, e não apenas na porta 3333.
+app.use( cors() );
 
 // Defining the port of localhost where will work all the process.
 // -> localhost:3333
