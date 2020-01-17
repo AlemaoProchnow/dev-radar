@@ -23,7 +23,7 @@
  * Já que todas as statusbar do app vão ter os itens lá de cima modificados, a 
  * modificação já será feita no próprio App, para assim modificar tudo. Mas se 
  * a necessidade for apenas uma tela ou outra, basta ir na tela desejada e mexer 
- * nesta statusbar, referencia, neste caso, na página desejada.
+ * nesta statusbar, referência, neste caso, na página desejada.
  */
 
 import React from 'react';

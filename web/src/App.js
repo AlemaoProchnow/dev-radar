@@ -130,6 +130,8 @@ import './App.css';
 import './Sidebar.css';
 import './Main.css';
 
+import './components/DevItem/style.css';
+
 function App() {
   const [ devs, setDevs ] = useState([]);
 
@@ -179,6 +181,24 @@ function App() {
 
       <main>
         <ul>
+          <li className="dev-item">
+            <header>
+              <img 
+                src="https://avatars0.githubusercontent.com/u/48127848?s=460&v=4"
+                alt="Cristian Prochnow"
+              />
+
+              <div className="user-info">
+                <strong> Cristian Prochnow </strong>
+
+                <span> ReactJS, React Native, Node.js </span>
+              </div>
+            </header>
+
+            <p> Desenvolvedor PHP durante o período letivo e aprendiz de JavaScript e suas tecnologias nas horas vagas. </p>
+            <a href={`https://github.com/AlemaoProchnow`}>Acessar perfil no GitHub</a>
+          </li>
+
           { devs.map( dev => (
             <DevItem key={ dev._id } dev={ dev } />
           ) ) }
