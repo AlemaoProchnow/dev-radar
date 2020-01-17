@@ -15,7 +15,7 @@ const routes = require('./routes');
 // Criando a aplicação do express.
 const app = express();
 
-mongoose.connect('mongodb+srv://omnistack:omnistackShow@cluster0-gkqu8.mongodb.net/week10?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://<user>:<password>@cluster0-gkqu8.mongodb.net/week10?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
