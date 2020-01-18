@@ -18,6 +18,9 @@
  * Quando deseja-se colocar algo em cima de algo, ou nesse caso, do mapa, é 
  * recomendado colocar o código desse conteúdo depois do código do elemento já 
  * existente, e não antes.
+ * 
+ * { text => setTechs(text) } pode ser substituído por simplesmente {setTechs}, 
+ * pois o parâmetro já vai ser passado automaticamente.
  */
 
 import React, { useEffect, useState } from 'react';
@@ -31,6 +34,7 @@ import styles from './styles';
 function Main({ navigation }) {
   const [ devs, setDevs ] = useState([]);
   const [ currentRegion, setCurrentRegion ] = useState(null);
+  const [ techs, setTechs ] = useState('');
 
   useEffect( () => {
     async function loadInitialPosition() {
@@ -66,13 +70,11 @@ function Main({ navigation }) {
       params: {
         latitude,
         longitude,
-        techs: 'ReactJS'
+        techs
       }
     });
 
-    console.log( response.data );
-
-    setDevs( response.data );
+    setDevs( response.data.devs );
   }
 
   if (!currentRegion) {
@@ -136,6 +138,7 @@ function Main({ navigation }) {
           placeholderTextColor="#999999"
           autoCapitalize="words"
           autoCorrect={false}
+          onChangeText={ text => setTechs(text) }
         />
 
         <TouchableOpacity onPress={loadDevs} style={ styles.loadButton }>
