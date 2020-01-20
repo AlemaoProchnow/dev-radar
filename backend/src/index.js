@@ -35,14 +35,16 @@
  *  "response" é a resposta dessa requisição, que neste caso, define o modo que 
  *  a resposta será recebida pelo cliente.
  * } response
+ * 
+ * app.post('/users', (request, response) => {
+ *
+ *   Já que a forma de se comunicar é por JSON, geralmente se passa a resposta 
+ *   do modo como está abaixo, quando se trata de textos.
+ *
+ *   return response.json({ message: 'Hello, OmniStack!' });
+ * });
  */
-// app.post('/users', (request, response) => {
-//   /**
-//    * Já que a forma de se comunicar é por JSON, geralmente se passa a resposta 
-//    * do modo como está abaixo, quando se trata de textos.
-//    */
-//   return response.json({ message: 'Hello, OmniStack!' });
-// });
+
 
 const express = require('express');
 const mongoose = require('mongoose');
