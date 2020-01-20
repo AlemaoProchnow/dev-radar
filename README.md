@@ -1,4 +1,4 @@
-# DevRadar
+<h1 align="center">DevRadar</h1>
 
 **Observação:** 
 
