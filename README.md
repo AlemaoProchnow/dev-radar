@@ -10,4 +10,4 @@
 
 <br />
 
-<p align="center">Projeto resultado da <code>Semana OmniStack 10.0</code> <strong><a href="https://rocketseat.com.br/">@Rocketseat</a></strong> .</p>
+<p align="center">Projeto que é resultado da <code>Semana OmniStack 10.0</code> <strong><a href="https://rocketseat.com.br/">@Rocketseat</a></strong> .</p>
