@@ -1,4 +1,4 @@
-<h1 align="center"><code>DevRadar</code></h1>
+<h1 align="center"><strong>DevRadar</strong></h1>
 
 <div align="center">
   <img src="https://img.shields.io/github/license/cristianprochnow/DevRadar" />
@@ -10,4 +10,4 @@
 
 <br />
 
-<p align="center">Projeto que é resultado da <strong>Semana OmniStack 10.0</strong> <strong><a href="https://rocketseat.com.br/">@Rocketseat</a></strong> .</p>
+<p align="center">Projeto que é resultado da <code>Semana OmniStack 10.0</code> <strong><a href="https://rocketseat.com.br/">@Rocketseat</a></strong> .</p>
