@@ -1,5 +1,10 @@
-<h1 align="center">DevRadar</h1>
+<h1 align="center"><code>DevRadar</code></h1>
 
-**Observação:** 
+<div align="center">
+  <img src="https://img.shields.io/github/license/cristianprochnow/DevRadar" />
+  <img src="https://img.shields.io/github/languages/code-size/cristianprochnow/DevRadar" />
+</div>
 
-*A quantidade excessiva de comentários, em determinadas páginas, se deve à mesma ser objeto de estudo e assim, anotações e lembretes podem acabar sendo feitas no próprio corpo do código.*
+<br />
+
+<p align="center">Projeto que é resultado da <strong>Semana OmniStack 11.0</strong> <strong><a href="https://rocketseat.com.br/">@Rocketseat</a></strong> .</p>
