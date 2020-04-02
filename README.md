@@ -8,6 +8,6 @@
   <img src="https://img.shields.io/badge/technology-react--native-darkviolet" />
 </div>
 
-<br />
+<br /> 
 
 <p align="center">Projeto que é resultado da <code>Semana OmniStack 10.0</code> <strong><a href="https://rocketseat.com.br/">@Rocketseat</a></strong> .</p>
